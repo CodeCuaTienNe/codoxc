@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
-import { Layout, Typography, Button, Space } from "antd";
-import { QuestionCircleOutlined, FileTextOutlined } from "@ant-design/icons";
-import CodeInput from "@/components/CodeInput";
-import Preview from "@/components/Preview";
 import Actions from "@/components/Actions";
+import CodeInput from "@/components/CodeInput";
 import HelpModal from "@/components/HelpModal";
+import Preview from "@/components/Preview";
 import SampleSelector from "@/components/SampleSelector";
+import { FileTextOutlined, QuestionCircleOutlined } from "@ant-design/icons";
+import { Button, Layout, Space, Typography } from "antd";
+import { useState } from "react";
 
 const { Header, Content, Footer } = Layout;
 const { Title, Text } = Typography;
@@ -25,7 +25,9 @@ export default function Home() {
   };
 
   return (
-    <Layout style={{ minHeight: "100vh" }}>
+    <Layout
+      style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
+    >
       <Header
         style={{
           background: "#fff",
@@ -46,10 +48,12 @@ export default function Home() {
             JavaScript to Word Converter
           </Text>
         </Space>
-        <Space>
+        <Space wrap>
           <Button
             icon={<FileTextOutlined />}
             onClick={() => setShowSamples(!showSamples)}
+            className="show-samples-btn"
+            size="large"
           >
             {showSamples ? "Hide Samples" : "Show Samples"}
           </Button>
@@ -57,13 +61,15 @@ export default function Home() {
             type="primary"
             icon={<QuestionCircleOutlined />}
             onClick={() => setHelpModalOpen(true)}
+            size="large"
+            className="help-guide-btn"
           >
             Help & Guide
           </Button>
         </Space>
       </Header>
 
-      <Content style={{ padding: "16px 24px" }}>
+      <Content style={{ padding: "16px 24px", flex: 1 }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           {showSamples && <SampleSelector onSelect={handleSampleSelect} />}
 
@@ -81,10 +87,38 @@ export default function Home() {
         </div>
       </Content>
 
-      <Footer style={{ textAlign: "center", background: "#fafafa" }}>
-        <Text type="secondary">
-          Codoxc - Powered by docx library
-        </Text>
+      <Footer
+        style={{
+          textAlign: "center",
+          background: "#fff",
+          borderTop: "1px solid #e8e8e8",
+          padding: "24px 16px",
+        }}
+      >
+        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+          <div style={{ marginBottom: 8 }}>
+            <Text strong style={{ fontSize: 16, color: "#2c3e50" }}>
+              © TienHover - Codoxc
+            </Text>
+          </div>
+          <Text type="secondary" style={{ fontSize: 14 }}>
+            JavaScript to Word Converter - Powered by{" "}
+            <a
+              href="https://docx.js.org"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#B8D8E8", textDecoration: "none" }}
+            >
+              docx
+            </a>{" "}
+            library
+          </Text>
+          <div style={{ marginTop: 8 }}>
+            <Text type="secondary" style={{ fontSize: 12 }}>
+              Built with Next.js, TypeScript & Ant Design
+            </Text>
+          </div>
+        </div>
       </Footer>
 
       <HelpModal open={helpModalOpen} onClose={() => setHelpModalOpen(false)} />
