@@ -63,6 +63,7 @@ export default function Home() {
             onClick={() => setHelpModalOpen(true)}
             size="large"
             className="help-guide-btn"
+            style={{ backgroundColor: "#0050b3", borderColor: "#0050b3" }}
           >
             Help & Guide
           </Button>

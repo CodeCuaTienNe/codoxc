@@ -1,9 +1,8 @@
 "use client";
 
-import { Card, Upload, Input, Button, Space, Typography, message, Tooltip } from "antd";
-import { UploadOutlined, ClearOutlined, QuestionCircleOutlined } from "@ant-design/icons";
+import { ClearOutlined, UploadOutlined } from "@ant-design/icons";
 import type { UploadProps } from "antd";
-import { TOOLTIP_CODE_INPUT, TOOLTIP_UPLOAD, TOOLTIP_CLEAR } from "@/constants/help";
+import { Button, Card, Input, Space, Typography, Upload, message } from "antd";
 
 const { TextArea } = Input;
 const { Text } = Typography;
@@ -40,30 +39,19 @@ export default function CodeInput({ code, setCode }: CodeInputProps) {
 
   return (
     <Card
-      title={
-        <Space>
-          Code Input
-          <Tooltip title={TOOLTIP_CODE_INPUT}>
-            <QuestionCircleOutlined style={{ color: '#B8D8E8', cursor: 'help' }} />
-          </Tooltip>
-        </Space>
-      }
+      title="Code Input"
       extra={
         <Space>
-          <Tooltip title={TOOLTIP_UPLOAD}>
-            <Upload {...uploadProps}>
-              <Button icon={<UploadOutlined />}>Upload File</Button>
-            </Upload>
-          </Tooltip>
-          <Tooltip title={TOOLTIP_CLEAR}>
-            <Button
-              icon={<ClearOutlined />}
-              onClick={handleClear}
-              disabled={!code}
-            >
-              Clear
-            </Button>
-          </Tooltip>
+          <Upload {...uploadProps}>
+            <Button icon={<UploadOutlined />}>Upload File</Button>
+          </Upload>
+          <Button
+            icon={<ClearOutlined />}
+            onClick={handleClear}
+            disabled={!code}
+          >
+            Clear
+          </Button>
         </Space>
       }
       style={{ marginBottom: 24 }}
