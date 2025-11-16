@@ -1,0 +1,31 @@
+{
+  "name": "codoxc",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.5.2",
+    "@ant-design/nextjs-registry": "^1.2.0",
+    "antd": "^5.27.4",
+    "clsx": "^2.1.1",
+    "docx": "^8.5.0",
+    "next": "15.1.3",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "typescript": "^5",
+    "eslint": "^8",
+    "eslint-config-next": "15.1.3",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4"
+  }
+}
