@@ -1,6 +1,6 @@
 # Codoxc - JavaScript to Word Converter
 
-A modern Next.js application that converts JavaScript code to beautifully formatted Word documents using the `docx` library.
+A modern Next.js application that converts JavaScript code to beautifully formatted Word documents using the `docx` library
 
 ## Features
 
