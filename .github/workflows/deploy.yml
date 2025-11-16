@@ -14,6 +14,8 @@ jobs:
   build_and_deploy:
     name: Build & Deploy 🚀
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4.1.7
