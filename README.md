@@ -128,11 +128,17 @@ module.exports = documentConfig; // Required for export
 
 This project is configured to deploy to GitHub Pages automatically.
 
-1. Push to `main` branch
-2. GitHub Actions will build and deploy to `gh-pages` branch
-3. Enable GitHub Pages in repository settings (Source: `gh-pages` branch)
+1. Push to `master` branch
+2. GitHub Actions will build and deploy to `public` branch
+3. Configure GitHub Pages in repository settings:
+   - Go to Settings > Pages
+   - Under "Build and deployment":
+     - Source: `Deploy from a branch`
+     - Branch: Select `public` branch
+     - Folder: `/ (root)`
+   - Click Save
 
-The app will be available at: `https://YOUR_USERNAME.github.io/codoxc/`
+The app will be available at: `https://codecuatienne.github.io/codoxc/`
 
 ## License
 
