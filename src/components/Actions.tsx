@@ -1,10 +1,11 @@
 "use client";
 
-import { Button, Space, message } from "antd";
+import { Button, Space, message, Tooltip } from "antd";
 import { FileWordOutlined, DownloadOutlined } from "@ant-design/icons";
 import { parseCode } from "@/lib/parser";
 import { generateDocument } from "@/lib/generator";
 import { useState } from "react";
+import { TOOLTIP_GENERATE, TOOLTIP_DOWNLOAD } from "@/constants/help";
 
 interface ActionsProps {
   code: string;
@@ -63,25 +64,29 @@ export default function Actions({
   };
 
   return (
-    <Space size="middle" style={{ marginBottom: 24 }}>
-      <Button
-        type="primary"
-        icon={<FileWordOutlined />}
-        onClick={handleGenerate}
-        loading={loading}
-        size="large"
-      >
-        Generate Word Document
-      </Button>
+    <Space size="middle" style={{ marginBottom: 24 }} wrap>
+      <Tooltip title={TOOLTIP_GENERATE}>
+        <Button
+          type="primary"
+          icon={<FileWordOutlined />}
+          onClick={handleGenerate}
+          loading={loading}
+          size="large"
+        >
+          Generate Word Document
+        </Button>
+      </Tooltip>
 
-      <Button
-        icon={<DownloadOutlined />}
-        onClick={handleDownload}
-        disabled={!blob}
-        size="large"
-      >
-        Download .docx
-      </Button>
+      <Tooltip title={TOOLTIP_DOWNLOAD}>
+        <Button
+          icon={<DownloadOutlined />}
+          onClick={handleDownload}
+          disabled={!blob}
+          size="large"
+        >
+          Download .docx
+        </Button>
+      </Tooltip>
     </Space>
   );
 }

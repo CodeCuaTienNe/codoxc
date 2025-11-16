@@ -11,6 +11,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.5.2",
     "@ant-design/nextjs-registry": "^1.2.0",
+    "@rc-component/trigger": "^3.6.15",
     "antd": "^5.27.4",
     "clsx": "^2.1.1",
     "docx": "^8.5.0",

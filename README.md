@@ -5,15 +5,21 @@ A modern Next.js application that converts JavaScript code to beautifully format
 ## Features
 
 - Upload `.js` or `.txt` files or paste code directly
+- Interactive tooltips and help system
+- 5 pre-built sample templates (Basic, Resume, Table, SRS, Formatted Text)
+- Comprehensive documentation with format guide
 - Support for multiple document elements:
-  - Paragraphs with rich text formatting
+  - Paragraphs with rich text formatting (bold, italic, colors, sizes)
   - Headings (H1-H6)
-  - Tables with custom styling
+  - Tables with custom styling and shading
   - 2-column layouts (perfect for resumes/CVs)
   - Text alignment, spacing, and indentation
-- Real-time preview
+  - Spacers for vertical spacing
+- Real-time preview with detailed metadata
 - Download as `.docx` files
-- Modern UI with Ant Design (pastel colors, minimal design)
+- Modern UI with Ant Design (pastel colors, minimal design, no shadows)
+- Fully responsive layout
+- AI-friendly prompt format guide
 
 ## Tech Stack
 
@@ -49,9 +55,24 @@ bun run build
 
 ## Usage
 
-1. **Write Code**: Paste your JavaScript code or upload a file
-2. **Generate**: Click "Generate Word Document"
-3. **Download**: Click "Download .docx" to save
+### Quick Start
+
+1. **Browse Samples**: Click on any sample template to load it into the editor
+2. **Or Write Code**: Paste your JavaScript code or upload a file
+3. **Get Help**: Click "Help & Guide" button for comprehensive documentation
+4. **Generate**: Click "Generate Word Document"
+5. **Preview**: Review the document metadata
+6. **Download**: Click "Download .docx" to save
+
+### Sample Templates
+
+The application includes 5 ready-to-use templates:
+
+1. **Basic Document** - Simple document with headings and paragraphs
+2. **Professional Resume** - Two-column resume layout
+3. **Table Example** - Product comparison table with styling
+4. **SRS Document** - Software Requirements Specification template
+5. **Text Formatting** - Examples of various text styles and colors
 
 ### Code Format
 
@@ -59,13 +80,27 @@ Your code must export a `documentConfig` object:
 
 ```javascript
 const documentConfig = {
-  sections: [
+  title: "Document Title",        // Optional
+  sections: [                     // Required
     {
-      children: [
+      properties: {               // Optional section properties
+        page: {
+          margin: {
+            top: 720,            // Margins in twentieths of a point
+            right: 720,
+            bottom: 720,
+            left: 720
+          }
+        }
+      },
+      children: [                // Required: array of elements
         {
           type: 'heading',
           text: 'My Document',
-          level: 1
+          level: 1,
+          options: {
+            alignment: 'center'  // Optional: left, center, right, justify
+          }
         },
         {
           type: 'paragraph',
@@ -73,9 +108,21 @@ const documentConfig = {
         }
       ]
     }
-  ]
+  ],
+  styles: {}                     // Optional custom styles
 };
+
+module.exports = documentConfig; // Required for export
 ```
+
+### Tooltips and Help
+
+- Hover over question mark icons for quick help
+- Click "Help & Guide" for detailed documentation including:
+  - Getting Started guide
+  - Complete format reference
+  - Prompt guide for AI coding assistants
+  - Examples and common patterns
 
 ## Deploy to GitHub Pages
 
