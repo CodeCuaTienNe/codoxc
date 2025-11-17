@@ -108,17 +108,12 @@ export default function Home() {
               href="https://docx.js.org"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#B8D8E8", textDecoration: "none" }}
+              style={{ color: "#b8d8e8", textDecoration: "none" }}
             >
               docx
             </a>{" "}
             library
           </Text>
-          <div style={{ marginTop: 8 }}>
-            <Text type="secondary" style={{ fontSize: 12 }}>
-              Built with Next.js, TypeScript & Ant Design
-            </Text>
-          </div>
         </div>
       </Footer>
 

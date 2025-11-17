@@ -43,7 +43,9 @@ export default function CodeInput({ code, setCode }: CodeInputProps) {
       extra={
         <Space>
           <Upload {...uploadProps}>
-            <Button icon={<UploadOutlined />}>Upload File</Button>
+            <Button icon={<UploadOutlined />} className="upload-btn">
+              Upload File
+            </Button>
           </Upload>
           <Button
             icon={<ClearOutlined />}
