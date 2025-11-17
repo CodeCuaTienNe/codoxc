@@ -18,7 +18,7 @@ export default function RootLayout({
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body>
         <AntdRegistry>
@@ -37,7 +37,7 @@ export default function RootLayout({
                 colorBgContainer: "#ffffff",  // White background
 
                 // Typography
-                fontFamily: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+                fontFamily: "'JetBrains Mono', monospace",
                 fontSize: 14,
                 fontSizeHeading1: 28,
                 fontSizeHeading2: 22,
@@ -66,7 +66,7 @@ export default function RootLayout({
                 },
                 Input: {
                   controlHeight: 36,
-                  fontFamily: "'Roboto Mono', monospace",
+                  fontFamily: "'JetBrains Mono', monospace",
                 },
                 Descriptions: {
                   labelBg: "#fafafa",
