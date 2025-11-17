@@ -22,13 +22,13 @@ export default function Preview({ config, generatedBlob }: PreviewProps) {
     <span>
       {label}{' '}
       <Tooltip title={tooltip}>
-        <QuestionCircleOutlined style={{ color: '#B8D8E8', cursor: 'help' }} />
+        <QuestionCircleOutlined style={{ color: '#0066FF', cursor: 'help' }} />
       </Tooltip>
     </span>
   );
 
   return (
-    <Card title="Preview" style={{ marginBottom: 24 }}>
+    <Card title="Preview" style={{ marginBottom: 24, background: "#ffffff" }}>
       <Descriptions column={1} bordered size="small">
         <Descriptions.Item label={<LabelWithTooltip label="Document Title" tooltip={TOOLTIP_TITLE} />}>
           {config.title || "Untitled"}

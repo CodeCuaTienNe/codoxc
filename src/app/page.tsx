@@ -30,25 +30,26 @@ export default function Home() {
     >
       <Header
         style={{
-          background: "#fff",
-          borderBottom: "1px solid #e8e8e8",
-          padding: "0 24px",
+          background: "#ffffff",
+          borderBottom: "1px solid #d9d9d9",
+          padding: "0 32px",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
           flexWrap: "wrap",
-          gap: "16px",
+          gap: "20px",
+          height: "64px",
         }}
       >
-        <Space>
-          <Title level={3} style={{ margin: 0, color: "#2c3e50" }}>
-            Codoxc
+        <Space size={12}>
+          <Title level={3} style={{ margin: 0, color: "#1a1a1a", fontWeight: 600, letterSpacing: "-0.02em" }}>
+            CODOXC
           </Title>
-          <Text type="secondary" style={{ display: "inline-block" }}>
+          <Text type="secondary" style={{ display: "inline-block", fontSize: 14 }}>
             JavaScript to Word Converter
           </Text>
         </Space>
-        <Space wrap>
+        <Space wrap size={12}>
           <Button
             icon={<FileTextOutlined />}
             onClick={() => setShowSamples(!showSamples)}
@@ -63,14 +64,13 @@ export default function Home() {
             onClick={() => setHelpModalOpen(true)}
             size="large"
             className="help-guide-btn"
-            style={{ backgroundColor: "#0050b3", borderColor: "#0050b3" }}
           >
             Help & Guide
           </Button>
         </Space>
       </Header>
 
-      <Content style={{ padding: "16px 24px", flex: 1 }}>
+      <Content style={{ padding: "32px", flex: 1, background: "#f5f5f5" }}>
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           {showSamples && <SampleSelector onSelect={handleSampleSelect} />}
 
@@ -91,24 +91,24 @@ export default function Home() {
       <Footer
         style={{
           textAlign: "center",
-          background: "#fff",
-          borderTop: "1px solid #e8e8e8",
-          padding: "24px 16px",
+          background: "#ffffff",
+          borderTop: "1px solid #d9d9d9",
+          padding: "32px 24px",
         }}
       >
         <div style={{ maxWidth: 1200, margin: "0 auto" }}>
           <div style={{ marginBottom: 8 }}>
-            <Text strong style={{ fontSize: 16, color: "#2c3e50" }}>
-              © TienHover - Codoxc
+            <Text strong style={{ fontSize: 15, color: "#1a1a1a", fontWeight: 600 }}>
+              © TienHover - CODOXC
             </Text>
           </div>
-          <Text type="secondary" style={{ fontSize: 14 }}>
+          <Text type="secondary" style={{ fontSize: 13 }}>
             JavaScript to Word Converter - Powered by{" "}
             <a
               href="https://docx.js.org"
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#b8d8e8", textDecoration: "none" }}
+              style={{ color: "#0066FF", textDecoration: "none", fontWeight: 500 }}
             >
               docx
             </a>{" "}

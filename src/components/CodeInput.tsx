@@ -56,7 +56,7 @@ export default function CodeInput({ code, setCode }: CodeInputProps) {
           </Button>
         </Space>
       }
-      style={{ marginBottom: 24 }}
+      style={{ marginBottom: 24, background: "#ffffff" }}
     >
       <Space direction="vertical" style={{ width: "100%" }} size="middle">
         <Text type="secondary">

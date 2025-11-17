@@ -70,7 +70,6 @@ export default function Actions({
         onClick={handleGenerate}
         loading={loading}
         size="large"
-        style={{ backgroundColor: "#0050b3", borderColor: "#0050b3" }}
       >
         Generate Word Document
       </Button>

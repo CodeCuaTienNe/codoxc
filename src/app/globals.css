@@ -15,28 +15,53 @@ body {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #fafafa;
+  background-color: #f5f5f5;
+  color: #1a1a1a;
 }
 
-/* Remove default ant design shadows and effects */
+/* Professional minimal design */
 .ant-btn:hover,
 .ant-btn:focus {
   transform: none !important;
   box-shadow: none !important;
 }
 
+.ant-btn {
+  border-radius: 2px !important;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
 .ant-card {
   box-shadow: none !important;
-  border: 1px solid #e8e8e8;
+  border: 1px solid #d9d9d9;
+  border-radius: 2px !important;
+}
+
+.ant-card-head {
+  border-bottom: 1px solid #d9d9d9;
+  font-weight: 600;
+  letter-spacing: -0.01em;
 }
 
 .ant-upload-drag {
-  border-radius: 4px !important;
+  border-radius: 2px !important;
+  border: 1px dashed #d9d9d9 !important;
+  background: #fafafa !important;
+}
+
+.ant-input,
+.ant-input-textarea textarea {
+  border-radius: 2px !important;
+  font-family: 'Roboto Mono', monospace !important;
+}
+
+.ant-descriptions-item-label {
+  font-weight: 500;
+  color: #666666;
 }
 
 /* Upload Button Hover Fix */
@@ -79,20 +104,21 @@ body {
 .help-content code {
   background: #f5f5f5;
   padding: 2px 6px;
-  border-radius: 3px;
-  font-family: "Courier New", monospace;
+  border-radius: 2px;
+  font-family: 'Roboto Mono', monospace;
   font-size: 13px;
-  color: #e74c3c;
+  color: #d32f2f;
 }
 
 .help-content pre {
-  background: #f8f9fa;
+  background: #fafafa;
   padding: 12px;
-  border-radius: 4px;
-  border: 1px solid #e8e8e8;
+  border-radius: 2px;
+  border: 1px solid #d9d9d9;
   overflow-x: auto;
   font-size: 13px;
   line-height: 1.5;
+  font-family: 'Roboto Mono', monospace;
 }
 
 /* Sample Selector Styles */
@@ -101,12 +127,12 @@ body {
 }
 
 .sample-card {
-  border-radius: 4px !important;
+  border-radius: 2px !important;
   transition: border-color 0.3s ease !important;
 }
 
 .sample-card:hover {
-  border-color: #b8d8e8 !important;
+  border-color: #0066FF !important;
   transform: none !important;
 }
 
@@ -121,33 +147,33 @@ body {
 }
 
 .show-samples-btn:hover {
-  color: #2c3e50 !important;
-  border-color: #2c3e50 !important;
+  color: #0066FF !important;
+  border-color: #0066FF !important;
 }
 
 /* Help & Guide Button - More Prominent */
 .help-guide-btn {
   font-weight: 600 !important;
-  background-color: #85b8cc !important;
+  background-color: #0066FF !important;
 }
 
 .help-guide-btn:hover {
-  background-color: #6ea3b8 !important;
+  background-color: #0052CC !important;
 }
 
 /* Generate Document Button - More Prominent */
 .ant-btn-primary.ant-btn-lg {
   font-weight: 600 !important;
-  background-color: #85b8cc !important;
+  background-color: #0066FF !important;
 }
 
 .ant-btn-primary.ant-btn-lg:hover {
-  background-color: #6ea3b8 !important;
+  background-color: #0052CC !important;
 }
 
 /* Footer Link Hover */
 footer a:hover {
-  color: #8ac4d0 !important;
+  color: #0066FF !important;
   text-decoration: underline !important;
 }
 
@@ -192,21 +218,21 @@ footer a:hover {
   }
 }
 
-/* Minimal scrollbar */
+/* Minimal scrollbar - Sharp edges */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 4px;
+  background: #bfbfbf;
+  border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
+  background: #999999;
 }
