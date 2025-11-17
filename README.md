@@ -138,7 +138,7 @@ This project is configured to deploy to GitHub Pages automatically.
      - Folder: `/ (root)`
    - Click Save
 
-The app will be available at: `https://codecuatienne.github.io/codoxc/`
+The app is available at: `https://codecuatienne.github.io/codoxc/`
 
 ## License
 
